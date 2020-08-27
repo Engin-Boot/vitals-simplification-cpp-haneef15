@@ -2,7 +2,7 @@
 
 bool isInsideLimit(float value,int lowerlimit,int upperlimit)
 {
-  return(value>=lowerlimit && value<=upperlimit)
+  return(value>=lowerlimit && value<=upperlimit);
 }
 bool vitalsAreOk(float bpm, float spo2, float respRate) {
   return(isInsideLimit(bpm,70,150) && isInsideLimit(spo2,90,100) && isInsideLimit(respRate,30,95));
