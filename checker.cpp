@@ -6,7 +6,7 @@ using namespace std;
 class AlertwithSMS
 {
   public:
-    void raiseAlert(cont char* VitalName, cont char* level)
+    void raiseAlert(const char* VitalName, const char* level)
     {
       cout<<"SMS" << VitalName << " " << level << endl;
     }
@@ -15,13 +15,13 @@ class AlertwithSMS
 class AlertwithSound
 {
   public:
-    void raiseAlert(cont char* VitalName, cont char* level)
+    void raiseAlert(const char* VitalName, const char* level)
     {
       cout<<"Sound" << VitalName << " " << level << endl;
     }
 };
 
-bool isInsideLimit(char* name,float value,int lowerlimit,int upperlimit)
+bool isInsideLimit(const char* name,float value,int lowerlimit,int upperlimit)
 {
   AlertwithSount *alert_with_sound = new AlertwithSound;
   AlertwithSMS *alert_with_sms = new AlerwithSMS;
