@@ -23,19 +23,19 @@ class AlertwithSound
 
 bool isInsideLimit(const char* name,float value,int lowerlimit,int upperlimit)
 {
-  AlertwithSount *alert_with_sound = new AlertwithSound;
+  AlertwithSound *alert_with_sound = new AlertwithSound;
   AlertwithSMS *alert_with_sms = new AlerwithSMS;
   if(value>=lowerlimit && value<=upperlimit)
   {
      return true;
   }
-  else if(value< lowerlimt)
+  else if(value< lowerlimit)
   {
      alert_with_sound.raiseAlert(name,"is low");
      alert_with_sms.raiseAlert(name,"is low");
      return false;
   }
-  else if(value >upperlimitlimt)
+  else if(value >upperlimit)
   {
      alert_with_sound.raiseAlert(name,"is high");
      alert_with_sms.raiseAlert(name,"is high");
